@@ -1,0 +1,58 @@
+.alert_box{
+    width:30vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0vh;
+    left: 50%;
+    margin-left: -15vw;
+    animation:alertAni 0.5s cubic-bezier(0.23, 1,1,1);
+    -webkit-animation:alertAni 0.5s cubic-bezier(0.23, 1,1,1);
+    .alert{
+        width: 100%;
+        overflow: hidden;
+        padding: 10px;
+        h1{
+            width: 100%;
+            color: $black;
+            font-size: $font-size-lg;
+            span{
+                font-size:24px;
+                color: $gray-700;
+                float: right;
+                cursor: pointer;
+            }
+        }
+        h2{
+            width: 100%;
+            color: $secondary;
+            font-size: $font-size-base;
+        }
+    }
+    .alert-warning{
+        background-color:rgba($color: $warning, $alpha: 0.4);
+        border:1px solid $warning;
+    }
+    .alert-success{
+        background-color:rgba($color: $green, $alpha: 0.4);
+        border:1px solid $green;
+    }
+    .alert-error{
+        background-color:rgba($color: $red, $alpha: 0.4);
+        border:1px solid $red;
+    }
+    .alert-info{
+        background-color:rgba($color: $indigo, $alpha: 0.4);
+        border:1px solid  $indigo;
+    }
+}
+@keyframes alertAni
+{
+	from {top:-10vh;}
+	to {top:0vh;}
+}
+
+@-webkit-keyframes alertAni 
+{
+	from {top:-10vh;}
+	to {top:0vh;}
+}
